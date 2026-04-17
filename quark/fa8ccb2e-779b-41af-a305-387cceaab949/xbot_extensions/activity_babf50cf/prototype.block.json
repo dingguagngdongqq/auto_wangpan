@@ -1,0 +1,1204 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_babf50cf.main",
+      "statement": "process.invoke_activity",
+      "title": "Redis 扩展",
+      "keywords": "",
+      "description": "通过python的第三方redis库实现对redis的增删改查操作",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/49/72/4972ca644968c078b68dac7f91fe897f.png",
+      "function": "xbot_extensions.activity_babf50cf.main",
+      "helpUrl": null,
+      "extension": "Redis 扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.启动redis连接",
+      "statement": "process.invoke_activity",
+      "title": "启动redis连接",
+      "keywords": "",
+      "description": "通过python的第三方redis库建立redis连接，并返回一个redis连接实例。（注意：该指令必须与“关闭redis连接”指令配合使用）",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process2",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701446468177920",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "host",
+          "label": "host",
+          "required": false,
+          "tips": "连接地址，默认为127.0.0.1",
+          "type": "str",
+          "default": "10:127.0.0.1",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "port",
+          "label": "port",
+          "required": false,
+          "tips": "端口号，默认为6379",
+          "type": "str",
+          "default": "10:6379",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "password",
+          "required": false,
+          "tips": "redis密码，默认为空",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "db",
+          "label": "db",
+          "required": false,
+          "tips": "数据库索引，默认为0",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "connection_pool",
+          "label": "connection_pool",
+          "tips": "redis连接实例，在后续的指令中传参使用",
+          "name": "connection_pool",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.redis_client",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.redis_client",
+      "helpUrl": null,
+      "extension": "Redis 扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.string_set",
+      "statement": "process.invoke_activity",
+      "title": "string_set",
+      "keywords": "",
+      "description": "设置指定 key 的值",
+      "comment": "设置指定 key 的值",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process3",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701412179742720",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "用于查找value值的索引名称，建议使用python的标识符命名规则，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "value",
+          "label": "value",
+          "required": false,
+          "tips": "存储在key下的值，各种类型均可，该指令会对value进行一次json封装后再set到redis中",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.string_get",
+      "statement": "process.invoke_activity",
+      "title": "string_get",
+      "keywords": "",
+      "description": "获取指定 key 的值。",
+      "comment": "获取指定 key 的值。",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process4",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701392802058240",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "value",
+          "label": "value",
+          "name": "value",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.hash_hset",
+      "statement": "process.invoke_activity",
+      "title": "hash_hset",
+      "keywords": "",
+      "description": "将哈希表 key 中的字段 field 的值设为 value",
+      "comment": "将哈希表 key 中的字段 field 的值设为 value",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process5",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701192817836032",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "保存hash的名称，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "field",
+          "label": "field",
+          "required": false,
+          "tips": "需要在hash中设置的字段名称，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "value",
+          "label": "value",
+          "required": false,
+          "tips": "需要在hash中设置的字段值，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.hash_hget",
+      "statement": "process.invoke_activity",
+      "title": "hash_hget",
+      "keywords": "",
+      "description": "获取指定哈希表中的指定字段的值",
+      "comment": "获取存储在哈希表中指定字段的值。",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process6",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701209558654976",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入已保持连接的redis_pool"
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "输入需要获取的hash表",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "field",
+          "label": "field",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "value",
+          "label": "value",
+          "name": "value",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.hash_hkeys",
+      "statement": "process.invoke_activity",
+      "title": "hash_hkeys",
+      "keywords": "",
+      "description": "获取所有哈希表中的字段",
+      "comment": "获取所有哈希表中的字段",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process7",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701253509222400",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "需要查询的hash的名称，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "field_list",
+          "label": "field_list",
+          "tips": "返回该查询的hash所有的字段名列表，格式为列表",
+          "name": "field_list",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.hash_hgetall",
+      "statement": "process.invoke_activity",
+      "title": "hash_hgetall",
+      "keywords": "",
+      "description": "获取指定哈希表中的所有字段和值，并返回一个dict",
+      "comment": "获取所有哈希表的字段和值",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process8",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701228990865408",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "需要查询的hash的名称，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "values_dict",
+          "label": "values_dict",
+          "tips": "返回该查询的hash所有的字段和值，格式为字典",
+          "name": "values_dict",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.list_llen",
+      "statement": "process.invoke_activity",
+      "title": "list_llen",
+      "keywords": "",
+      "description": "获取列表长度",
+      "comment": "获取列表长度",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process9",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701292059262976",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "需要查询的列表key，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "list_len",
+          "label": "list_len",
+          "tips": "返回该查询列表的元素个数，格式为整数",
+          "name": "list_len",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.list_lpop",
+      "statement": "process.invoke_activity",
+      "title": "list_lpop",
+      "keywords": "",
+      "description": "移出并获取列表头部的第一个元素",
+      "comment": "移出并获取列表的第一个元素",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process10",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701326213480448",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "用于保存该列表的索引名称，建议使用python的标识符命名规则，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "value",
+          "label": "value",
+          "tips": "从key这个列表的头部移除的一个元素值",
+          "name": "value",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.list_lpush",
+      "statement": "process.invoke_activity",
+      "title": "list_lpush",
+      "keywords": "",
+      "description": "将一个或多个值插入到列表头部",
+      "comment": "将一个或多个值插入到列表头部",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process11",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701360388476928",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "用于保存该列表的索引名称，建议使用python的标识符命名规则，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "value_list",
+          "label": "value_list",
+          "required": false,
+          "tips": "将在列表头部插入元素值的列表，格式必须为一个列表",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.list_rpop",
+      "statement": "process.invoke_activity",
+      "title": "list_rpop",
+      "keywords": "",
+      "description": "移除列表的最后一个元素，返回值为移除的元素。",
+      "comment": "移除%key%列表的最后一个元素，返回值为移除的元素。",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process12",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701342554296320",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "用于保存该列表的索引名称，建议使用python的标识符命名规则，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "value",
+          "label": "value",
+          "tips": "从key这个列表的尾部移除的一个元素值",
+          "name": "value",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.list_rpush",
+      "statement": "process.invoke_activity",
+      "title": "list_rpush",
+      "keywords": "",
+      "description": "在列表中添加一个或多个值",
+      "comment": "在%key%列表中添加%value_list%值",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process13",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701376725291008",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "用于保存该列表的索引名称，建议使用python的标识符命名规则，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "value_list",
+          "label": "value_list",
+          "required": false,
+          "tips": "将依次在列表尾部添加元素值的列表，格式必须为一个列表",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.list_lindex",
+      "statement": "process.invoke_activity",
+      "title": "list_lindex",
+      "keywords": "",
+      "description": "通过索引获取列表的值",
+      "comment": "通过索引获取列表的值",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process14",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701275994886144",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "需要查询的列表索引名称，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "index",
+          "label": "index",
+          "required": false,
+          "tips": " 需要查询的列表指定下标位置，格式为整数",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "value",
+          "label": "value",
+          "tips": "返回列表中该查询下标的元素值，格式为字符串",
+          "name": "value",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.list_lrange",
+      "statement": "process.invoke_activity",
+      "title": "list_lrange",
+      "keywords": "",
+      "description": "获取列表指定范围内的元素",
+      "comment": "获取列表指定范围内的元素",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process15",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701310006497280",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "需要切片的redis列表的索引名称，必须为redis库中已存在的key",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "start",
+          "label": "start",
+          "required": false,
+          "tips": "需要获取范围的开始下标，格式为整数",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end",
+          "label": "end",
+          "required": false,
+          "tips": "需要获取范围的结束下标，格式为整数",
+          "type": "int",
+          "default": "13:-1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "value_list",
+          "label": "value_list",
+          "tips": "获取到的列表指定范围内元素值列表，格式为列表",
+          "name": "value_list",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.关闭redis连接",
+      "statement": "process.invoke_activity",
+      "title": "关闭redis连接",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process16",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701432983683072",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.set_sadd",
+      "statement": "process.invoke_activity",
+      "title": "set_sadd",
+      "keywords": "",
+      "description": "该指令实现了往集合中添加成员",
+      "comment": "在连接对象%connection_pool%中，往集合%key%中，以列表%values_list%形式添加成员",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process17",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701149630439424",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "values_list",
+          "label": "values_list",
+          "required": false,
+          "tips": "",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.key_expire",
+      "statement": "process.invoke_activity",
+      "title": "key_expire",
+      "keywords": "",
+      "description": "该指令可以给redis的key值设置过期时间",
+      "comment": "该指令可以给redis的key值设置过期时间",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/rollback.png",
+      "function": "xbot_extensions.activity_babf50cf.process19",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701177382797312",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "redis连接实例，是启动redis连接指令的返回值",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "需要设置key，格式为字符串",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "time",
+          "label": "time",
+          "required": false,
+          "tips": "设置过期的时间，时间单位为秒",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin",
+            "placeholder": "设置过期的时间，时间单位为秒，例如：60 ，就代表过期时间为60秒"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.module1",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.module1",
+      "helpUrl": null,
+      "extension": "Redis 扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.test",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process20",
+      "helpUrl": null,
+      "extension": "Redis 扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.set_members",
+      "statement": "process.invoke_activity",
+      "title": "set_members",
+      "keywords": "",
+      "description": "该指令实现了获取set集合里面的成员",
+      "comment": "在连接对象%connection_pool%，获取集合%key%中的所有成员，并返回结果%membes_set%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process21",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701161746432000",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "membes_set",
+          "label": "membes_set",
+          "name": "membes_set",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_babf50cf.set_srem",
+      "statement": "process.invoke_activity",
+      "title": "set_srem",
+      "keywords": "",
+      "description": "该指令实现了在移除集合的成员",
+      "comment": "在连接对象%connection_pool%中，以列表%values_list%的形式移除集合%key%中的成员",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_babf50cf.process22",
+      "helpUrl": "/yddoc/rpa/zh-CN/889701135097176064",
+      "extension": "Redis 扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "connection_pool",
+          "label": "connection_pool",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "key",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "values_list",
+          "label": "values_list",
+          "required": false,
+          "tips": "",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "uuid": "54afc4d5-8625-4e1d-86e3-25d53c125a2b",
+  "name": "Redis 扩展",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/49/72/4972ca644968c078b68dac7f91fe897f.png",
+  "version": "26.2.0",
+  "tags": null,
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "feature_list": [
+    2
+  ],
+  "description": "通过python的第三方redis库实现对redis的增删改查操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_babf50cf",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "启动redis连接",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "redis_client",
+      "filename": "redis_client",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "string_set",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "string_get",
+      "filename": "process4",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "hash_hset",
+      "filename": "process5",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "hash_hget",
+      "filename": "process6",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "hash_hkeys",
+      "filename": "process7",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "hash_hgetall",
+      "filename": "process8",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "list_llen",
+      "filename": "process9",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "list_lpop",
+      "filename": "process10",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "list_lpush",
+      "filename": "process11",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "list_rpop",
+      "filename": "process12",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "list_rpush",
+      "filename": "process13",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "list_lindex",
+      "filename": "process14",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "list_lrange",
+      "filename": "process15",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "关闭redis连接",
+      "filename": "process16",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "set_sadd",
+      "filename": "process17",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "key_expire",
+      "filename": "process19",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "module1",
+      "filename": "module1",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "test",
+      "filename": "process20",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "set_members",
+      "filename": "process21",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "set_srem",
+      "filename": "process22",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "test"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "Deprecated==1.2.13",
+    "packaging==21.3",
+    "pyparsing==3.0.6",
+    "redis==4.1.1",
+    "wrapt==1.13.3"
+  ],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": null
+}

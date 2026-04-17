@@ -1,0 +1,183 @@
+<root>
+  <item name="xbot_extensions.activity_babf50cf" display="activity_babf50cf" kind="module">
+    <item.method />
+    <item.desc>Redis 扩展
+通过python的第三方redis库实现对redis的增删改查操作</item.desc>
+    <item name="xbot_extensions.activity_babf50cf.process2" display="process2" kind="function" help="/yddoc/rpa/zh-CN/889701446468177920">
+      <item.method>process2(host,port,password,db)</item.method>
+      <item.desc>启动redis连接
+通过python的第三方redis库建立redis连接，并返回一个redis连接实例。（注意：该指令必须与“关闭redis连接”指令配合使用）
+* @param host，连接地址，默认为127.0.0.1
+* @param port，端口号，默认为6379
+* @param password，redis密码，默认为空
+* @param db，数据库索引，默认为0
+* @return connection_pool，redis连接实例，在后续的指令中传参使用
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process3" display="process3" kind="function" help="/yddoc/rpa/zh-CN/889701412179742720">
+      <item.method>process3(connection_pool,key,value)</item.method>
+      <item.desc>string_set
+设置指定 key 的值
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，用于查找value值的索引名称，建议使用python的标识符命名规则，格式为字符串
+* @param value，存储在key下的值，各种类型均可，该指令会对value进行一次json封装后再set到redis中
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process4" display="process4" kind="function" help="/yddoc/rpa/zh-CN/889701392802058240">
+      <item.method>process4(connection_pool,key)</item.method>
+      <item.desc>string_get
+获取指定 key 的值。
+* @param connection_pool，
+* @param key，
+* @return value，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process5" display="process5" kind="function" help="/yddoc/rpa/zh-CN/889701192817836032">
+      <item.method>process5(connection_pool,key,field,value)</item.method>
+      <item.desc>hash_hset
+将哈希表 key 中的字段 field 的值设为 value
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，保存hash的名称，格式为字符串
+* @param field，需要在hash中设置的字段名称，格式为字符串
+* @param value，需要在hash中设置的字段值，格式为字符串
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process6" display="process6" kind="function" help="/yddoc/rpa/zh-CN/889701209558654976">
+      <item.method>process6(connection_pool,key,field)</item.method>
+      <item.desc>hash_hget
+获取指定哈希表中的指定字段的值
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，
+* @param field，
+* @return value，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process7" display="process7" kind="function" help="/yddoc/rpa/zh-CN/889701253509222400">
+      <item.method>process7(connection_pool,key)</item.method>
+      <item.desc>hash_hkeys
+获取所有哈希表中的字段
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，需要查询的hash的名称，格式为字符串
+* @return field_list，返回该查询的hash所有的字段名列表，格式为列表
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process8" display="process8" kind="function" help="/yddoc/rpa/zh-CN/889701228990865408">
+      <item.method>process8(connection_pool,key)</item.method>
+      <item.desc>hash_hgetall
+获取指定哈希表中的所有字段和值，并返回一个dict
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，需要查询的hash的名称，格式为字符串
+* @return values_dict，返回该查询的hash所有的字段和值，格式为字典
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process9" display="process9" kind="function" help="/yddoc/rpa/zh-CN/889701292059262976">
+      <item.method>process9(connection_pool,key)</item.method>
+      <item.desc>list_llen
+获取列表长度
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，需要查询的列表key，格式为字符串
+* @return list_len，返回该查询列表的元素个数，格式为整数
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process10" display="process10" kind="function" help="/yddoc/rpa/zh-CN/889701326213480448">
+      <item.method>process10(connection_pool,key)</item.method>
+      <item.desc>list_lpop
+移出并获取列表头部的第一个元素
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，用于保存该列表的索引名称，建议使用python的标识符命名规则，格式为字符串
+* @return value，从key这个列表的头部移除的一个元素值
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process11" display="process11" kind="function" help="/yddoc/rpa/zh-CN/889701360388476928">
+      <item.method>process11(connection_pool,key,value_list)</item.method>
+      <item.desc>list_lpush
+将一个或多个值插入到列表头部
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，用于保存该列表的索引名称，建议使用python的标识符命名规则，格式为字符串
+* @param value_list，将在列表头部插入元素值的列表，格式必须为一个列表
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process12" display="process12" kind="function" help="/yddoc/rpa/zh-CN/889701342554296320">
+      <item.method>process12(connection_pool,key)</item.method>
+      <item.desc>list_rpop
+移除列表的最后一个元素，返回值为移除的元素。
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，用于保存该列表的索引名称，建议使用python的标识符命名规则，格式为字符串
+* @return value，从key这个列表的尾部移除的一个元素值
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process13" display="process13" kind="function" help="/yddoc/rpa/zh-CN/889701376725291008">
+      <item.method>process13(connection_pool,key,value_list)</item.method>
+      <item.desc>list_rpush
+在列表中添加一个或多个值
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，用于保存该列表的索引名称，建议使用python的标识符命名规则，格式为字符串
+* @param value_list，将依次在列表尾部添加元素值的列表，格式必须为一个列表
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process14" display="process14" kind="function" help="/yddoc/rpa/zh-CN/889701275994886144">
+      <item.method>process14(connection_pool,key,index)</item.method>
+      <item.desc>list_lindex
+通过索引获取列表的值
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，需要查询的列表索引名称，格式为字符串
+* @param index， 需要查询的列表指定下标位置，格式为整数
+* @return value，返回列表中该查询下标的元素值，格式为字符串
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process15" display="process15" kind="function" help="/yddoc/rpa/zh-CN/889701310006497280">
+      <item.method>process15(connection_pool,key,start,end)</item.method>
+      <item.desc>list_lrange
+获取列表指定范围内的元素
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，需要切片的redis列表的索引名称，必须为redis库中已存在的key
+* @param start，需要获取范围的开始下标，格式为整数
+* @param end，需要获取范围的结束下标，格式为整数
+* @return value_list，获取到的列表指定范围内元素值列表，格式为列表
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process16" display="process16" kind="function" help="/yddoc/rpa/zh-CN/889701432983683072">
+      <item.method>process16(connection_pool)</item.method>
+      <item.desc>关闭redis连接
+
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process17" display="process17" kind="function" help="/yddoc/rpa/zh-CN/889701149630439424">
+      <item.method>process17(connection_pool,key,values_list)</item.method>
+      <item.desc>set_sadd
+该指令实现了往集合中添加成员
+* @param connection_pool，
+* @param key，
+* @param values_list，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process19" display="process19" kind="function" help="/yddoc/rpa/zh-CN/889701177382797312">
+      <item.method>process19(connection_pool,key,time)</item.method>
+      <item.desc>key_expire
+该指令可以给redis的key值设置过期时间
+* @param connection_pool，redis连接实例，是启动redis连接指令的返回值
+* @param key，需要设置key，格式为字符串
+* @param time，设置过期的时间
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process21" display="process21" kind="function" help="/yddoc/rpa/zh-CN/889701161746432000">
+      <item.method>process21(connection_pool,key)</item.method>
+      <item.desc>set_members
+该指令实现了获取set集合里面的成员
+* @param connection_pool，
+* @param key，
+* @return membes_set，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_babf50cf.process22" display="process22" kind="function" help="/yddoc/rpa/zh-CN/889701135097176064">
+      <item.method>process22(connection_pool,key,values_list)</item.method>
+      <item.desc>set_srem
+该指令实现了在移除集合的成员
+* @param connection_pool，
+* @param key，
+* @param values_list，
+</item.desc>
+    </item>
+  </item>
+</root>
