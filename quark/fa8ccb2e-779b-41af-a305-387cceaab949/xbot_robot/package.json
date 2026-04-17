@@ -1,0 +1,71 @@
+{
+  "uuid": "fa8ccb2e-779b-41af-a305-387cceaab949",
+  "name": "夸克网盘",
+  "icon": null,
+  "version": "1",
+  "tags": null,
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    4,
+    5,
+    6,
+    8
+  ],
+  "description": null,
+  "instruction": "",
+  "use_latest_pip": false,
+  "videoName": "",
+  "startup": "main",
+  "robot_type": "app",
+  "activity_code": null,
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "quark_save",
+      "filename": "quark_save",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "客户端",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [],
+  "variables": [],
+  "external_dependencies": [],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {
+    "gifUrl": null,
+    "videoUrl": "",
+    "imageUrl": "",
+    "imageName": ""
+  },
+  "terminalTags": null
+}

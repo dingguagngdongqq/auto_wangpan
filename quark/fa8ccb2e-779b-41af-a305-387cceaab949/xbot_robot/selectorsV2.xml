@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://selector/core" xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="7aead9cc-c694-41e4-add8-1d0eac802c5e" name="夸克网盘分享" type="Web" processName="msedge" icon=".dev\icon\59513b38-0220-403d-a027-41599c8f01c7.png" criteria="https://pan.quark.cn" selectorOringin="Inspect">
+    <selector id="6598152a-fc0c-43b4-8dd9-7190971cd41f" name="保存到网盘" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="夸克网盘分享" screenshot=".dev\screenshot\c2fa1d24-2c7c-4823-9ff6-fda7e9a9e569.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="ice-container" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="DetailLayout--container--264z8Xd DetailLayout--share-detail-container--2v06EHx share-container-cls-name-for-get-dom" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="DetailLayout--content--14Z28Ay" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="share-detail-content" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareDetail--content-body--3dZcv3x" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="share-content" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="file-list list-file-share-height" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ant-table-wrapper" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ant-spin-nested-loading" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ant-spin-container" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" contains:class="ant-table ant-table-default">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <xpath enable="true">
+        <segment value="//*[@id=&quot;ice-container&quot;]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div/div[2]/button" />
+      </xpath>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/772423583317176322/file/client/element/f4a6516b5b47315eb6ea36a478f8c6b6beb31196d8e613ff745d3c5aa297de8e_semantic_False.png" rectangle="[250,152,431,739]" desc="" />
+    </selector>
+    <selector id="89c5a37a-d5dd-4c77-8dc6-cf3db9111927" name="点击文件图标" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="夸克网盘分享" screenshot=".dev\screenshot\35feb167-b02e-48c8-a1c8-3d1f8113d213.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="ice-container" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="DetailLayout--container--264z8Xd DetailLayout--share-detail-container--2v06EHx share-container-cls-name-for-get-dom" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="DetailLayout--content--14Z28Ay" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="share-detail-content" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" class="ShareDetail--content-body--3dZcv3x">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <xpath enable="true">
+        <segment value="//*[@id=&quot;ice-container&quot;]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div/div[1]" />
+      </xpath>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/772423583317176322/file/client/element/e482d2f0944ce2712f69f143f637e133a69d6715b264e47ca720714c7aae0754_semantic_False.png" rectangle="[0,60,1000,885]" desc="" />
+    </selector>
+    <selector id="7c212e5b-23ac-4c8c-b933-8499ed3c2ec7" name="点击全部文件" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="夸克网盘分享" screenshot=".dev\screenshot\906899ed-034e-421f-9896-3bf59a2970d4.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="4" index="10" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ant-modal-root" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" contains:class="ant-modal-wrap">
+        <optional role="dialog" index-of-type="1" tabindex="-1" aria-labelledby="rcDialogTitle0" index="1" />
+      </web>
+      <xpath enable="true">
+        <segment value="/html/body/div[5]/div/div[2]/div/div[2]/div[2]/div/div[2]/ul/li/span[2]/span[2]" />
+      </xpath>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/772423583317176322/file/client/element/28fc2f4abccd001ad262b921cc33cd7a7f5a30f34ba8198638ca13b4131476d2_semantic_False.png" rectangle="[0,0,1000,1000]" desc="" />
+    </selector>
+    <selector id="f8afcf40-0a1e-4ecc-992d-548d0f095211" name="点击新建文件夹" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="夸克网盘分享" screenshot=".dev\screenshot\fe152ada-3126-4bc7-ac07-692fcbb4a979.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="4" index="10" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ant-modal-root" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" contains:class="ant-modal-wrap">
+        <optional role="dialog" index-of-type="1" tabindex="-1" aria-labelledby="rcDialogTitle0" index="1" />
+      </web>
+      <xpath enable="true">
+        <segment value="/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/button" />
+      </xpath>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/772423583317176322/file/client/element/33e8addd5171885876627dd8f17430f8256f07b9aee2e5455dbe87d19f4e4e26_semantic_False.png" rectangle="[0,0,1000,1000]" desc="" />
+    </selector>
+    <selector id="22df4488-e0f8-4c2d-8ff8-e97279c4a9f8" name="确认新建" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="夸克网盘分享" screenshot=".dev\screenshot\8f40bd52-35ff-4a3b-9051-58a7ab1c1c3d.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="4" index="10" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ant-modal-root" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional role="dialog" class="ant-modal-wrap ant-modal-centered" index-of-type="1" tabindex="-1" aria-labelledby="rcDialogTitle0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional role="document" class="ant-modal move-to-modal lately-save-modal" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ant-modal-content" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ant-modal-body" index-of-type="1" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="move-to-container" index-of-type="1" index="1" />
+      </web>
+      <web x:name="ul" contains:class="ant-tree-directory">
+        <optional role="tree" index-of-type="0" unselectable="on" index="0" />
+      </web>
+      <web x:name="li" index-of-type="0">
+        <optional class="ant-tree-treenode-switcher-open" role="treeitem" index="0" />
+      </web>
+      <web x:name="ul" contains:class="ant-tree-child-tree">
+        <optional role="group" index-of-type="0" data-expanded="true" index="2" />
+      </web>
+      <web x:name="li" index-of-type="0">
+        <optional class="ant-tree-treenode-switcher-open" role="treeitem" index="0" />
+      </web>
+      <web x:name="span">
+        <optional title="新建文件夹-260401-161215979" innerText="新建文件夹-260401-161215979" class="ant-tree-node-content-wrapper ant-tree-node-content-wrapper-open" index-of-type="1" index="1" />
+      </web>
+      <web x:name="span" class="ant-tree-title">
+        <optional innerText="新建文件夹-260401-161215979" index-of-type="1" index="1" />
+      </web>
+      <xpath enable="true">
+        <segment value="/html/body/div[5]/div/div[2]/div/div[2]/div[3]/div/div/div/button[2]" />
+      </xpath>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/772423583317176322/file/client/element/5ca82950229d5a385b86005cd5b9568c2ff6343b8af055bf6affdfb0db509962_semantic_False.png" rectangle="[374,416,114,19]" desc="" />
+    </selector>
+    <selector id="73017ea3-d5d6-43ac-b3e7-0b6e215f42b1" name="该分享已失效，不可访问" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="夸克网盘分享" screenshot=".dev\screenshot\464e0938-f350-46cb-96e5-27cc2e4d370c.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="ice-container" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="DetailLayout--container--264z8Xd DetailLayout--share-detail-container--2v06EHx share-container-cls-name-for-get-dom" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="DetailLayout--content--14Z28Ay" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareError--content--38P8Js9" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareError--content-body--hyIjofX" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="该分享已失效，不可访问" index-of-type="1" index="1" />
+      </web>
+      <web x:name="p" contains:class="ShareError--tips-text">
+        <optional innerText="该分享已失效，不可访问" index-of-type="0" index="0" />
+      </web>
+      <xpath enable="true">
+        <segment value="//p[contains(@class, &quot;ShareError--tips-text&quot;)]" />
+      </xpath>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/772423583317176322/file/client/element/1480c6293c6967641d33137ead2122bbb78d1245d0812fe2a0f7e8453323e64d_semantic_False.png" rectangle="[438,523,56,10]" desc="" />
+    </selector>
+    <selector id="f2464a49-cff1-4c6a-8331-ef10932320ae" name="提取文件" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="夸克网盘分享" screenshot=".dev\screenshot\45608722-88d6-4f9f-9fb6-b4ea93549d10.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="ice-container" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--wrapcontainer--3OAJUiU share-container-cls-name-for-get-dom" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--wrapcontent--2fA9pbO" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--container--32_heqw" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--content--3zjCAuj" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="提取文件" index-of-type="4" index="4" />
+      </web>
+      <web x:name="button">
+        <optional innerText="提取文件" type="button" class="ant-btn ShareReceivePC--submit-btn--1tyQVhs ant-btn-primary" index-of-type="0" index="0" />
+      </web>
+      <anchor text="" targetRectangle="[1134,705,284,50]" anchorRectangle="[1248,719,56,21]" version="1" threshold="0.6" />
+      <xpath enable="true">
+        <segment value="//*[@id=&quot;ice-container&quot;]/div[1]/div[2]/div/div[1]/div[5]/button" />
+      </xpath>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/772423583317176322/file/client/element/3bc3eb6d2d1fe00caa78793f99b67bd8164b5368d23a3ba6830d3359e747a6a8_semantic_False.png" rectangle="[444,560,111,39]" desc="" />
+    </selector>
+    <selector id="507adfe0-359f-46b4-8a27-15b680cdf47f" name="输入框_ant-input" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="夸克网盘分享" screenshot=".dev\screenshot\916a559e-0aff-4da0-af61-22c6a903167e.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="ice-container" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--wrapcontainer--3OAJUiU share-container-cls-name-for-get-dom" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--wrapcontent--2fA9pbO" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--container--32_heqw" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--content--3zjCAuj" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ShareReceivePC--input-wrap--2FUw27N" index-of-type="2" index="2" />
+      </web>
+      <web x:name="input" contains:class="ant-input">
+        <optional type="text" index-of-type="0" placeholder="请输入提取码，不区分大小写" index="0" />
+      </web>
+      <xpath enable="true">
+        <segment value="//input[contains(@class, &quot;ant-input&quot;)]" />
+      </xpath>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/772423583317176322/file/client/element/8b1a68d9e588712a7cb11497b175f3ca696589e332d69f96ae382712679d5cdf_semantic_False.png" rectangle="[306,490,387,38]" desc="" />
+    </selector>
+  </group>
+  <group id="2be14f42-12ec-4ccb-bacd-e76b48c6f1bf" name="Chrome Legacy Window" type="Win32" processName="quark" icon="" criteria="" selectorOringin="Inspect">
+    <selector id="2a1bfe21-b149-4d12-b160-254b246da45e" name="客户端搜索框" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\9bb980b7-8184-469b-a4ba-49705895ae93.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="夸克网盘 - 夸克" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="夸克网盘" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="body" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="body" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="main-window" id="main-window" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="section" class="ant-layout ant-layout-has-sider ant-dropdown-trigger homelayout-wrapper system-windows" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout homelayout-content-wrapper main-window-layout-main" text-align="left" />
+      </acc>
+      <acc x:name="header">
+        <optional role="Grouping" index="0" display="block" tag="header" class="ant-layout-header homelayout-header-nav" text-align="left" />
+      </acc>
+      <acc x:name="div" index="0">
+        <optional role="Grouping" display="flex" tag="div" class="HeaderNav__quark-cloud-drive-header-toolbar--Tsgd3" text-align="left" />
+      </acc>
+      <acc x:name="div" index="3">
+        <optional role="Grouping" display="flex" tag="div" class="Search__quark-cloud-drive-search--EH9zv Search__hover--MGiE2" text-align="left" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;夸克网盘 - 夸克&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//header/div[@index=&quot;0&quot;]/div[@index=&quot;3&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="61c29b69-55e3-4ec1-a922-d1382b01c0a3" name="首页" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\c21f1a1d-5082-49b3-b0f8-9e4bf0b84b92.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="夸克网盘 - 夸克" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="夸克网盘" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="body" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="body" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="main-window" id="main-window" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="section" class="ant-layout ant-layout-has-sider ant-dropdown-trigger homelayout-wrapper system-windows" text-align="left" />
+      </acc>
+      <acc x:name="aside" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="aside" class="ant-layout-sider ant-layout-sider-dark layout-sider" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="SiderNav__homelayout-sider-nav--vBz34" text-align="left" />
+      </acc>
+      <acc x:name="div" index="0" id="nav-item-首页">
+        <optional role="Grouping" display="flex" tag="div" class="SiderNav__nav-item--aqK4a SiderNav__nav-item-selected--Sqs3z" text-align="left" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;夸克网盘 - 夸克&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//div[@index=&quot;0&quot;][@id=&quot;nav-item-首页&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="1a66953d-d867-4b65-8826-bca1236f22e4" name="已选中" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\1756cc46-71ff-47b9-b76e-0502d476c415.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="5" display="flex" tag="div" class="share-content" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="11" display="block" tag="div" class="ant-spin-nested-loading" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="ant-spin-container" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="ant-table ant-table-fixed-header" text-align="left" />
+      </acc>
+      <acc x:name="table" x:selected="false">
+        <optional role="Table" index="0" display="table" tag="table" text-align="left" />
+      </acc>
+      <acc x:name="thead" x:selected="false">
+        <optional role="Grouping" index="0" display="table-header-group" tag="thead" class="ant-table-thead" text-align="left" />
+      </acc>
+      <acc x:name="tr" x:selected="false">
+        <optional role="Row" index="0" display="table-row" tag="tr" text-align="left" />
+      </acc>
+      <acc x:name="th" x:selected="false">
+        <optional role="ColumnHeader" acc-name="全选已选中1项" index="1" display="table-cell" tag="th" name-from="contents" table-cell-index="1" class="ant-table-cell share-td-file" text-align="left" />
+      </acc>
+      <acc x:name="StaticText" acc-name="已选中">
+        <optional role="StaticText" index="1" name-from="contents" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//StaticText[@acc-name=&quot;已选中&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="60689556-cd05-4794-a134-bcab2b953a2c" name="点击准备新建" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\5349333d-be61-45d0-8db6-e577937191f0.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" index="0">
+        <optional role="Grouping" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="div" index="6">
+        <optional role="Grouping" display="flex" tag="div" class="save-path" text-align="left" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//div[@index=&quot;0&quot;]/div[@index=&quot;6&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="b72d9c45-bf8c-4000-9438-81a7c5a470f8" name="文件" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\678ee29c-68c1-479c-95e0-d9d7598d8309.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="3" display="block" tag="div" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="ant-modal-root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" acc-name="保存到" index="1" display="block" tag="div" name-from="contents" class="ant-modal-wrap ant-modal-centered" text-align="center" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Dialog" acc-name="保存到" index="1" display="inline-block" tag="div" xml-roles="dialog" name-from="related-element" explicit-name="true" class="ant-modal path-selector-modal" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="1" display="block" tag="div" class="ant-modal-content" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="4" display="block" tag="div" class="path-selector-container" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="path-selector-scroll" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Outline" index="0" display="block" tag="div" xml-roles="tree" setsize="0" class="ant-tree ant-tree-block-node ant-tree-directory" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="1" display="block" tag="div" class="ant-tree-list" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" setsize="0" class="ant-tree-treenode ant-tree-treenode-switcher-open ant-tree-treenode-leaf-last" text-align="left" />
+      </acc>
+      <acc x:name="span" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="span" class="ant-tree-node-content-wrapper ant-tree-node-content-wrapper-open" text-align="left" />
+      </acc>
+      <acc x:name="span" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="span" text-align="left" />
+      </acc>
+      <acc x:name="StaticText" acc-name="文件">
+        <optional role="StaticText" index="0" name-from="contents" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//StaticText[@acc-name=&quot;文件&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="a54b9240-4dd7-4bd1-a53e-92f443401b77" name="新建文件夹" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\95aec1f3-450b-4e8e-9f4f-f98a9ff5d702.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="4" display="block" tag="div" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="ant-modal-root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" acc-name="保存到" index="1" display="block" tag="div" name-from="contents" class="ant-modal-wrap ant-modal-centered" text-align="center" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Dialog" acc-name="保存到" index="1" display="inline-block" tag="div" xml-roles="dialog" name-from="related-element" explicit-name="true" class="ant-modal path-selector-modal" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="1" display="block" tag="div" class="ant-modal-content" text-align="left" />
+      </acc>
+      <acc x:name="button" acc-name="新建文件夹">
+        <optional role="PushButton" index="5" display="flex" tag="button" name-from="contents" class="quark-cloud-drive-button new-folder-btn" text-align="center" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//button[@acc-name=&quot;新建文件夹&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="984ff70c-3667-4553-9254-7ca2af5afed7" name="确认新建文件" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\34d511ce-65a1-427c-82f7-9d7b332a3404.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="4" display="block" tag="div" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="ant-modal-root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="1" display="block" tag="div" class="ant-modal-wrap ant-modal-centered" text-align="center" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Dialog" acc-name="保存到" index="1" display="inline-block" tag="div" xml-roles="dialog" name-from="related-element" explicit-name="true" class="ant-modal path-selector-modal" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="1" display="block" tag="div" class="ant-modal-content" text-align="left" />
+      </acc>
+      <acc x:name="button" acc-name="确认">
+        <optional role="PushButton" index="7" display="flex" tag="button" name-from="contents" class="quark-cloud-drive-button quark-cloud-drive-button-primary confirm-btn" text-align="center" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//button[@acc-name=&quot;确认&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="153157c2-4011-42dc-87ae-944d1b1e192b" name="保存已选" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\65688bce-a816-408c-80b3-9cd4507c0eb3.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="button" x:selected="false">
+        <optional role="PushButton" acc-name="保存 (已选1)" index="7" display="flex" tag="button" name-from="contents" class="quark-cloud-drive-button quark-cloud-drive-button-primary share-list-btn" text-align="center" />
+      </acc>
+      <acc x:name="StaticText" acc-name="保存">
+        <optional role="StaticText" index="0" name-from="contents" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//StaticText[@acc-name=&quot;保存&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="31ec16b0-eb26-47c5-966d-e6bb2db0bf12" name="MenuItem_有更新" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\fb3bcd62-06d5-4a8a-833f-f47c8b6c8249.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="夸克网盘 - 夸克" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="夸克网盘" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="body" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="body" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="main-window" id="main-window" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="section" class="ant-layout ant-layout-has-sider ant-dropdown-trigger homelayout-wrapper system-windows hide-overflow-x" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout homelayout-content-wrapper main-window-layout-main" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout" text-align="left" />
+      </acc>
+      <acc x:name="main" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="main" xml-roles="main" class="ant-layout-content homelayout-content" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="UploadDragWrap__upload-drag-wrap--ixLmQ file-list file-list-save" id="drag-over-trigger-container" text-align="left" />
+      </acc>
+      <acc x:name="ul" x:selected="false">
+        <optional role="MenuPopup" index="6" display="flex" tag="ul" xml-roles="menu" setsize="4" class="ant-menu ant-menu-root ant-menu-vertical ant-menu-light CommonTagsMenu__menu--s67wI" text-align="left" />
+      </acc>
+      <acc x:name="li" acc-name="有更新">
+        <optional role="MenuItem" index="2" display="block" tag="li" xml-roles="menuitem" setsize="4" posinset="3" name-from="contents" class="ant-menu-item ant-menu-item-active ant-menu-item-only-child" text-align="left" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;夸克网盘 - 夸克&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//li[@acc-name=&quot;有更新&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="d0301546-debc-409d-aafd-d63b88a77008" name="文件列表" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\dd79c8b7-2f51-4eda-b5eb-758c7581f136.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="夸克网盘 - 夸克" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="夸克网盘" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="body" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="body" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="main-window" id="main-window" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="section" class="ant-layout ant-layout-has-sider ant-dropdown-trigger homelayout-wrapper system-windows" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout homelayout-content-wrapper main-window-layout-main" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout" text-align="left" />
+      </acc>
+      <acc x:name="main" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="main" xml-roles="main" class="ant-layout-content homelayout-content" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="div" class="section-main" id="quark-cloud-drive-section-main" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="11" display="flex" tag="div" class="file-list all-files" id="drag-over-trigger-container" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="selecto-container quark-cloud-drive-table-file" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="ant-spin-nested-loading" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="ant-spin-container" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" class="ant-table ant-table-fixed-header" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="1" display="block" tag="div" class="ant-table-body ant-table-body-scroll" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" text-align="left" />
+      </acc>
+      <acc x:name="table">
+        <optional role="Table" index="0" display="block" tag="table" text-align="left" />
+      </acc>
+      <acc x:name="tr" contains:class="ant-table-row">
+        <optional role="Row" index="3" display="flex" tag="tr" text-align="left" />
+      </acc>
+      <acc x:name="td" x:selected="false">
+        <optional role="Cell" acc-name="新建文件夹-260401-174002207dswdewd wefdewf" index="1" display="flex" tag="td" name-from="contents" table-cell-index="11" class="ant-table-cell td-file td-file-name ant-table-cell-row-hover" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="filename" id="54e0fc8315c24c28939e92c87d25ca22" text-align="left" />
+      </acc>
+      <acc x:name="div" role="Grouping" index="0" contains:class="FileName__file-click-wrap--BmaPY">
+        <optional display="flex" tag="div" text-align="left" />
+      </acc>
+    </selector>
+    <selector id="e8c21e8a-0e4f-4b10-8920-0bfefffd4ecc" name="下载" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\ef43b23e-ecaa-48ed-89c4-22e183424c61.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="夸克网盘 - 夸克" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="夸克网盘" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="body" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="body" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="main-window" id="main-window" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="section" class="ant-layout ant-layout-has-sider ant-dropdown-trigger homelayout-wrapper system-windows" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout homelayout-content-wrapper main-window-layout-main" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout" text-align="left" />
+      </acc>
+      <acc x:name="main" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="main" xml-roles="main" class="ant-layout-content homelayout-content" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="div" class="section-main" id="quark-cloud-drive-section-main" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="6" display="flex" tag="div" class="button-flow-group-container" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="overflow-container" text-align="left" />
+      </acc>
+      <acc x:name="button" acc-name="下载">
+        <optional role="PushButton" index="0" display="flex" tag="button" name-from="contents" class="quark-cloud-drive-button quark-cloud-drive-button-text operate-button-default-btn" text-align="center" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;夸克网盘 - 夸克&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//button[@acc-name=&quot;下载&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="f857552e-294c-4fe5-a875-78e010414b4b" name="失效链接" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\fb8f7cde-b68e-444b-93b7-55b6af9f44f4.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="svg" index="4">
+        <optional role="Graphic" display="block" tag="svg" class="Icon__svg-icon-with-path-fill--lot7O windows-header-toolbar__header-icon-item--iOXg7" text-align="left" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//svg[@index=&quot;4&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="48727f89-396c-4e43-bc97-104599b5d533" name="PushButton_提取文件" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\e730f35a-372f-4cb5-bbee-44b28d60d791.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="button" x:selected="false">
+        <optional role="PushButton" acc-name="提取文件" index="7" display="block" tag="button" name-from="contents" class="ant-btn ant-btn-primary button-submit" text-align="center" />
+      </acc>
+      <acc x:name="span" x:selected="false">
+        <optional role="Grouping" index="0" display="inline-block" tag="span" text-align="center" />
+      </acc>
+      <acc x:name="StaticText" acc-name="提取文件">
+        <optional role="StaticText" index="0" name-from="contents" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//StaticText[@acc-name=&quot;提取文件&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="192fc30d-1731-474a-a3c0-63db60fc4f71" name="请输入提取码" type="simple" framework="acc" selectorOringin="Inspect" processName="quark" productName="" winTitle="Chrome Legacy Window" screenshot=".dev\screenshot\0f7a856c-c111-4958-97bf-c12b3dba0e93.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="分享链接" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="分享链接" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="input" role="Text">
+        <optional acc-name="请输入提取码，不区分大小写" index="6" display="block" tag="input" name-from="placeholder" explicit-name="true" class="ant-input code-input" text-align="center" text-model="a1" text-input-type="text" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;分享链接&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//input[@role=&quot;Text&quot;]" />
+      </xpath>
+    </selector>
+  </group>
+  <group id="a90e486a-d43c-4909-a976-dff86b8df93a" name="默认分组" type="Unknown" processName="" icon="" criteria="" selectorOringin="Inspect">
+    <selector id="32fa12fd-a954-4e50-8eea-906be6af3b24" name="刷新" type="simple" framework="acc" selectorOringin="Inspect" processName="" productName="" winTitle="" screenshot=".dev\screenshot\8ae8fc61-6feb-4cce-9e70-0635646abcc1.jpg" version="2">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="夸克网盘 - 夸克" app="quark">
+        <optional />
+      </wnd>
+      <wnd x:name="Control" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+      <acc x:name="Document" x:selected="false">
+        <optional role="Document" acc-name="夸克网盘" index="0" tag="#document" name-from="related-element" explicit-name="true" text-align="left" />
+      </acc>
+      <acc x:name="body" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="body" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="div" id="root" text-align="left" />
+      </acc>
+      <acc x:name="div" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="div" class="main-window" id="main-window" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="0" display="flex" tag="section" class="ant-layout ant-layout-has-sider ant-dropdown-trigger homelayout-wrapper system-windows" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout homelayout-content-wrapper main-window-layout-main" text-align="left" />
+      </acc>
+      <acc x:name="section" x:selected="false">
+        <optional role="Grouping" index="1" display="flex" tag="section" class="ant-layout" text-align="left" />
+      </acc>
+      <acc x:name="main" x:selected="false">
+        <optional role="Grouping" index="0" display="block" tag="main" xml-roles="main" class="ant-layout-content homelayout-content" text-align="left" />
+      </acc>
+      <acc x:name="div" contains:class="section-main">
+        <optional role="Grouping" index="1" display="flex" tag="div" id="quark-cloud-drive-section-main" text-align="left" />
+      </acc>
+      <acc x:name="button" contains:class="quark-cloud-drive-button-text">
+        <optional role="PushButton" index="10" display="flex" tag="button" text-align="center" />
+      </acc>
+      <acc x:name="svg" contains:class="quark-cloud-drive-button">
+        <optional role="Graphic" index="0" display="block" tag="svg" text-align="center" />
+      </acc>
+      <xpath enable="true">
+        <segment value="/Window[@cls=&quot;Chrome_WidgetWin_1&quot;][@title=&quot;夸克网盘 - 夸克&quot;][@app=&quot;quark&quot;]/Control[@cls=&quot;Chrome_RenderWidgetHostHWND&quot;][@title=&quot;Chrome Legacy Window&quot;]" />
+        <segment value="//div[contains(@class, &quot;section-main&quot;)]/button[contains(@class, &quot;quark-cloud-drive-button-text&quot;)]/svg[contains(@class, &quot;quark-cloud-drive-button&quot;)]" />
+      </xpath>
+    </selector>
+  </group>
+</repository>
